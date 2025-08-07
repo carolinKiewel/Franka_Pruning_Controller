@@ -1,0 +1,26 @@
+---
+moveit_servo:
+  planning_frame: "base"
+  ee_frame_name: "fr3_hand_tcp"
+
+  move_group_name: fr3_manipulator  # ← or whatever your planning group is called
+
+  publish_period: 0.01
+  scale:
+    linear: 0.3
+    rotational: 0.8
+
+  incoming_command_timeout: 0.1
+  command_in_type: "geometry_msgs/Twist"
+  cartesian_command_in_topic: "/servo_node/delta_twist_cmds"
+
+  robot_link_command_frame: "fr3_hand_tcp"
+
+  joint_topic: "/joint_states"
+
+  status_topic: "/servo_node/status"
+  use_streaming_mode: true
+  override_velocities: false
+  override_accelerations: false
+
+  use_gazebo: true

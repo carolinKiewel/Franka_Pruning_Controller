@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd"
+            schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>move_arm</name>
+  <version>0.0.1</version>
+  <description>Package to control the Franka arm using MoveIt and custom twist commands.</description>
+
+  <maintainer email="missikiewel@gmail.com">user</maintainer>
+  <license>BSD-3-Clause</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <!-- ROS 2 core -->
+  <build_depend>rclcpp</build_depend>
+  <build_export_depend>rclcpp</build_export_depend>
+  <exec_depend>rclcpp</exec_depend>
+
+  <!-- Messages -->
+  <build_depend>geometry_msgs</build_depend>
+  <build_export_depend>geometry_msgs</build_export_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+
+  <build_depend>std_msgs</build_depend>
+  <build_export_depend>std_msgs</build_export_depend>
+  <exec_depend>std_msgs</exec_depend>
+
+  <build_depend>sensor_msgs</build_depend>
+  <build_export_depend>sensor_msgs</build_export_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+
+  <build_depend>trajectory_msgs</build_depend>
+  <build_export_depend>trajectory_msgs</build_export_depend>
+  <exec_depend>trajectory_msgs</exec_depend>
+
+  <build_depend>geometric_shapes</build_depend><!--ADDED 04.08-->
+  <build_export_depend>geometric_shapes</build_export_depend><!--ADDED 04.08-->
+  <exec_depend>geometric_shapes</exec_depend><!--ADDED 04.08-->
+
+  <!-- TF -->
+  <build_depend>tf2_geometry_msgs</build_depend>
+  <build_export_depend>tf2_geometry_msgs</build_export_depend>
+  <exec_depend>tf2_geometry_msgs</exec_depend>
+
+  <!-- MoveIt -->
+  <build_depend>moveit_ros_planning_interface</build_depend>
+  <build_export_depend>moveit_ros_planning_interface</build_export_depend>
+  <exec_depend>moveit_ros_planning_interface</exec_depend>
+
+  <build_depend>moveit_ros_planning</build_depend>
+  <build_export_depend>moveit_ros_planning</build_export_depend>
+  <exec_depend>moveit_ros_planning</exec_depend>
+
+  <!-- Custom msgs -->
+  <build_depend>move_arm_msgs</build_depend>
+  <build_export_depend>move_arm_msgs</build_export_depend>
+  <exec_depend>move_arm_msgs</exec_depend>
+
+  <!-- Pluginlib (optional but useful with MoveIt) -->
+  <build_depend>pluginlib</build_depend>
+  <build_export_depend>pluginlib</build_export_depend>
+  <exec_depend>pluginlib</exec_depend>
+
+  <!-- Optional if using rclcpp components (not strictly needed unless you're loading your node dynamically) -->
+  <build_depend>rclcpp_components</build_depend>
+  <build_export_depend>rclcpp_components</build_export_depend>
+  <exec_depend>rclcpp_components</exec_depend>
+
+  <!-- Linting -->
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
